@@ -37,7 +37,7 @@ function Navbar() {
           <Link to="/" className="text-slate-700 hover:text-slate-900">Map</Link>
           <Link to="/updates" className="text-slate-700 hover:text-slate-900">Updates</Link>
           <Link to="/about" className="text-slate-700 hover:text-slate-900">About</Link>
-          <a href="https://t.me/" target="_blank" className="text-blue-600 font-semibold">Telegram</a>
+          <a href="https://t.me/H2OK_tyumen" target="_blank" className="text-blue-600 font-semibold" rel="noreferrer">Telegram</a>
         </nav>
       </div>
     </div>
@@ -112,7 +112,7 @@ function MapPage() {
           {p.open_hours && <div className="text-xs">Hours: {p.open_hours}</div>}
           <div className="text-xs">Water: {p.has_cold ? 'cold' : ''} {p.has_hot ? '/ hot' : ''}</div>
           <div className="text-xs">Access: {p.access_type === 'free' ? 'free' : 'ask staff'}</div>
-          <a className="text-blue-600 text-xs" target="_blank" href={`https://www.google.com/maps/dir/?api=1&destination=${p.latitude},${p.longitude}`}>Directions</a>
+          <a className="text-blue-600 text-xs" target="_blank" rel="noreferrer" href={`https://www.google.com/maps/dir/?api=1&destination=${p.latitude},${p.longitude}`}>Directions</a>
         </div>
       </Popup>
     </Marker>
@@ -174,7 +174,7 @@ function UpdatesPage() {
             <div key={it.id} className="border rounded p-4 bg-white">
               <div className="font-medium">{it.title}</div>
               <div className="text-sm text-slate-700 whitespace-pre-line">{it.content}</div>
-              {it.external_url && <a className="text-blue-600 text-sm" target="_blank" href={it.external_url}>Read more</a>}
+              {it.external_url && <a className="text-blue-600 text-sm" target="_blank" rel="noreferrer" href={it.external_url}>Read more</a>}
             </div>
           ))}
         </div>
@@ -190,7 +190,7 @@ function AboutPage() {
       <div className="pt-20 max-w-3xl mx-auto px-4 space-y-4">
         <h1 className="text-2xl font-semibold">About the project</h1>
         <p className="text-slate-700">H2Ok helps you find free water refill points nearby. The MVP focuses on speed and clarity: an interactive map, a simple search, and useful updates.</p>
-        <a href="https://t.me/" target="_blank" className="inline-flex px-4 py-2 bg-blue-600 text-white rounded">Join our Telegram community</a>
+        <a href="https://t.me/H2OK_tyumen" target="_blank" rel="noreferrer" className="inline-flex px-4 py-2 bg-blue-600 text-white rounded">Join our Telegram community</a>
       </div>
     </div>
   )
